@@ -1,0 +1,6 @@
+Ola professor Nilton, esse e o T1 realizado por : 
+      George Andre  (38338)
+      Lincoln Lins  (38344)
+      Lucas Roberto (38346)
+      Hugo tavares  (40139)
+Favor executar o arquivo *index.bat*, ele compila e mostra uma lista drop down de todos os programas.
