@@ -1,8 +1,9 @@
-/*Por 
-	  George Andre  (38338)
-	  Lincoln Lins  (38344)
-	  Lucas Roberto (38346)
-	  Hugo tavares  (40139)
+/*Por
+      20/05/18
+      George Andre  (38338)
+      Lincoln Lins  (38344)
+      Lucas Roberto (38346)
+      Hugo tavares  (40139)
 */
 #include <stdio.h>
 #include <conio.h>
@@ -11,6 +12,18 @@
 
 int main(int argc, char const *argv[])
 {
+
+	printf("\n4-CONSECUTIVOS: Num sorteio que distribui prêmios, um participante");
+	printf("\nsorteia um inteiro N que representa a quantidade de bolas de um globo da");
+	printf("\nsorte e cada bola possui um valor. O número de pontos do participante é o");
+	printf("\ntamanho da maior sequência de valores consecutivos iguais. Por exemplo,");
+	printf("\nsuponhamos que um participante sorteia N = 11 e, nesta ordem, os");
+	printf("\nvalores 30, 30, 30, 30, 40, 40, 40, 40, 40, 30, 30. Então, o participante");
+	printf("\nganha 5 pontos, correspondentes aos 5 valores 40 consecutivos. Note que");
+	printf("\no participante sorteou 6 valores iguais a 30, mas nem todos são");
+	printf("\nconsecutivos. Determine o número de pontos de um participante onde a");
+	printf("\nquantidade de bolas deve ser 1 ≤ N ≤ 104");
+
 	int num, vbola, aux, score, score_f, i;
 
 	i = 1; //variavel contadora
@@ -18,7 +31,7 @@ int main(int argc, char const *argv[])
 	score_f = 0;
 	aux = 0; 
 
-	printf("Informe a quantidade de bolas(1 - 10 000)\n");
+	printf("\nInforme a quantidade de bolas(1 - 10 000)\n");
 	scanf("%d", &num); //NUMERO INTEIRO DE BOLAS A SEREM SORTEADAS
 	do{
 		while (num <=0 || num > 10000){ // 10 000 do enunciado 10^4

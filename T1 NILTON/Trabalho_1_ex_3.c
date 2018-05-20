@@ -1,4 +1,5 @@
-/*Por 
+/*Por
+      20/05/18
       George Andre  (38338)
       Lincoln Lins  (38344)
       Lucas Roberto (38346)
@@ -17,10 +18,27 @@ void flush_in()
 
 int main()
 {
+    printf("\n3-PEDÁGIO: A invenção do carro tornou muito mais rápido e mais barato");
+    printf("\nrealizar viagens de longa distância. Realizar uma viagem rodoviária tem");
+    printf("\ndois tipos de custos: cada quilômetro percorrido na rodovia tem um custo");
+    printf("\nassociado (não só devido ao consumo de combustível mas também devido");
+    printf("\nao desgaste das peças do carro, pneus, etc.), mas também é necessário");
+    printf("\npassar por vários pedágios localizados ao longo da rodovia. Os pedágios");
+    printf("\nsão igualmente espaçados ao logo da rodovia; o começo da estrada não");
+    printf("\npossui um pedágio, mas o seu final pode estar logo após um pedágio (por");
+    printf("\nexemplo, se a distância entre dois pedágios consecutivos for de 37 km e a");
+    printf("\nestrada tiver 111 km, o motorista deve pagar um pedágio aos 37 km, aos");
+    printf("\n74 km e aos 111 km, logo antes de terminar a sua viagem). Dadas as");
+    printf("\ncaracterísticas da rodovia e os custos com gasolina e com pedágios,");
+    printf("\ninforme o custo total da viagem. Considere que o comprimento (C) da");
+    printf("\nestrada é 1 ≤ C ≤ 104");
+    printf("\ne a distância (D) entre pedágios é 1 ≤ D ≤ 104");
+    printf("\n.");
+
     float qte, str, dst, preco, gas, km, precokm, multpr, precot, vtotal,des, des_t;
     int i, aux;
     //Valida a entrada da distancia do percurso
-    printf("Informe a distancia em Km do percurso(estrada): ");
+    printf("\nInforme a distancia em Km do percurso(estrada): ");
     scanf("%f", &str);
     flush_in();
     if (str<=0 || str>10000){
