@@ -619,9 +619,9 @@ int main(void){
                         printf("|-------------------------------------------------|\n");
                         printf("|                   Voce sabia?                   |\n");
                         printf("|-------------------------------------------------|\n");
-                        printf("| %d R$ ja foram sacados no total nessa maquina.   |\n",saque_total);
-                        printf("| A maquina carrega, nesse momento, %d notas.      |\n",notas_totais);
-                        printf("| As notas totalizam %d R$!!!                      |\n",caixa);
+                        printf(" %d R$ ja foram sacados no total nessa maquina.   \n",saque_total);
+                        printf(" A maquina carrega, nesse momento, %d notas.      \n",notas_totais);
+                        printf(" As notas totalizam %d R$!!!                      \n",caixa);
                         printf("|-------------------------------------------------|\n");
                         //Fim da maquiagem
                         system("pause");
