@@ -33,10 +33,11 @@ int main(void){
         printf("\nMENU PRINCIPAL");
         printf("\n\n(1) Saque");
         printf("\n(2) Gerente");
-        printf("\n(3) Finalizar");
+        printf("\n(3) Creditos");
+        printf("\n(4) Finalizar");
         printf("\n\nDigite a opção: ");
         scanf("%d",&opc1);
-        if((opc1!=1) && (opc1!=2) && (opc1!=3)) {
+        if((opc1!=1) && (opc1!=2) && (opc1!=3) && (opc1 != 4)) {
             printf("\nOpção inválida!\n");
             system("pause");
         } else {
@@ -1005,6 +1006,24 @@ int main(void){
                     }
                 } while(opc2!=5);
             }
+            if(opc1==3){
+                system("cls");
+                printf("------------------------------------------------------------------------------------------------------\n");
+                printf("______                             _        _____  _____     _______ _____   _   _ _ _ _              \n");
+                printf("| ___ \\                           | |      /  __ \\/  __ \\   / /_   _/ __  \\ | \\ | (_) | |             \n");
+                printf("| |_/ / __ _ _ __   ___ ___     __| | ___  | /  \\/| /  \\/  / /  | | `' / /' |  \\| |_| | |_ ___  _ __  \n");
+                printf("| ___ \\/ _` | '_ \\ / __/ _ \\   / _` |/ _ \\ | |    | |     / /   | |   / /   | . ` | | | __/ _ \\| '_ \\ \n");
+                printf("| |_/ / (_| | | | | (_| (_) | | (_| |  __/ | \\__/\\| \\__/\\/ /    | | ./ /___ | |\\  | | | || (_) | | | |\n");
+                printf("\\____/ \\__,_|_| |_|\\___\\___/   \\__,_|\\___|  \\____(_)____/_/     \\_/ \\_____/ \\_| \\_/_|_|\\__\\___/|_| |_|\n");
+                printf("------------------------------------------------------------------------------------------------------\n");
+                printf("T2 Nilton\n");
+                printf("Feito por:\n");
+                printf("George Andre  (38338)\n");
+                printf("Lincoln Lins  (38344)\n");
+                printf("Lucas Roberto (38346)\n");
+                printf("Hugo tavares  (40139)\n");
+                break;
+            }
         }
-    } while(opc1!=3);
+    } while(opc1!=4);
 }
