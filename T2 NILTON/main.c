@@ -1022,7 +1022,7 @@ int main(void){
                 printf("Lincoln Lins  (38344)\n");
                 printf("Lucas Roberto (38346)\n");
                 printf("Hugo tavares  (40139)\n");
-                break;
+                system("pause");
             }
         }
     } while(opc1!=4);
