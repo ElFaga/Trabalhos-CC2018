@@ -224,7 +224,11 @@ int main(void){
                         printf("\\____/ \\__,_|_| |_|\\___\\___/   \\__,_|\\___|  \\____(_)____/_/     \\_/ \\_____/ \\_| \\_/_|_|\\__\\___/|_| |_|\n");
                         printf("------------------------------------------------------------------------------------------------------\n");
                         //Um pouco de maquiagem asubasuasubasuabuh
-                        printf("\nVoce sacou ");
+                        if (saque != 0){
+                            printf("\nVoce sacou ");
+                        }else{
+                            printf("");
+                        }
                         //Centena de milhar
                         if (sd6 >= 0){
                             if (sd6 > 0 && sd5 == 0 && sd4 == 0 ){
@@ -653,15 +657,1225 @@ int main(void){
                     scanf("%d",&opc2);
                     switch(opc2) {
                         case 1: printf("\nVocê escolheu a opção %d\n",opc2);
-                                printf("O valor total sacado foi %d R$\n",saque_total);
+                                printf("O valor total sacado foi %d R$ ou,\n",saque_total);
+                                sd6 = (saque_total / 100000) % 10;  //Da esquerda pra direita
+                                sd5 = (saque_total / 10000) % 10;
+                                sd4 = (saque_total / 1000) % 10;
+                                sd3 = (saque_total / 100) % 10;
+                                sd2 = (saque_total / 10) % 10;
+                                sd1 = (saque_total) % 10;
+                                //Debug
+                                if (saque_total != 0){
+                                    printf("\nFoi sacado ");
+                                }else{
+                                    printf("");
+                                }
+                                //Centena de milhar
+                                if (sd6 >= 0){
+                                    if (sd6 > 0 && sd5 == 0 && sd4 == 0 ){
+                                        printf("cem " );
+                                    }else if(sd6 > 0 && sd5 != 0 && sd4 != 0){
+                                        printf("cento e ");
+                                    }else{
+                                        printf("");
+                                    }
+                                }
+                                //Dezena de milhar
+                                if (sd5 >= 0){
+                                    if (sd5 == 0){
+                                        printf("");
+                                    }
+                                    if (sd5 > 0 && sd4 == 0){
+                                        switch(sd5){
+                                            case 9:
+                                                printf("noventa ");
+                                                break;
+                                            case 8:
+                                                printf("oitenta ");
+                                                break;
+                                            case 7:
+                                                printf("setenta ");
+                                                break;
+                                            case 6:
+                                                printf("sessenta ");
+                                                break;
+                                            case 5:
+                                                printf("cinquenta ");
+                                                break;
+                                            case 4:
+                                                printf("quarenta ");
+                                                break;
+                                            case 3:
+                                                printf("trinta ");
+                                                break;
+                                            case 2:
+                                                printf("vinte ");
+                                                break;
+                                            case 1:
+                                                printf("dez ");
+                                                break;
+                                        }
+                                    }else if (sd5 > 0 && sd4 > 0){
+                                        switch(sd5){
+                                            case 9:
+                                                printf("noventa e ");
+                                                break;
+                                            case 8:
+                                                printf("oitenta e ");
+                                                break;
+                                            case 7:
+                                                printf("setenta e ");
+                                                break;
+                                            case 6:
+                                                printf("sessenta e ");
+                                                break;
+                                            case 5:
+                                                printf("cinquenta e ");
+                                                break;
+                                            case 4:
+                                                printf("quarenta e ");
+                                                break;
+                                            case 3:
+                                                printf("trinta e ");
+                                                break;
+                                            case 2:
+                                                printf("vinte e ");
+                                                break;
+                                            case 1:
+                                                if (sd4 > 5)
+                                                {
+                                                    printf("dez"); //O dez e um caso especial infelizmente, so pra ferrar minha vida
+                                                }else if (sd4 == 5){
+                                                    printf("quinze ");
+                                                }else if (sd4 == 4){
+                                                    printf("quatorze ");
+                                                }else if (sd4 == 3){
+                                                    printf("treze ");
+                                                }else if (sd4 == 2){
+                                                    printf("doze ");
+                                                }else if (sd4 == 1){
+                                                    printf("onze ");
+                                                }else{
+                                                    printf("dez ");
+                                                }
+                                                break;
+                                        }
+                                    }
+                                }
+                                //Unidade de milhar
+                                if (sd4 >= 0){
+                                    if (sd4 == 0){
+                                        printf("");
+                                    }
+                                    if (sd4 > 0 && sd5 == 1){
+                                        switch(sd4){
+                                            case 9:
+                                                printf("enove ");
+                                                break;
+                                            case 8:
+                                                printf("eoito ");
+                                                break;
+                                            case 7:
+                                                printf("essete ");
+                                                break;
+                                            case 6:
+                                                printf("esseis ");
+                                                break;
+                                            case 5:
+                                                printf("");
+                                                break;
+                                            case 4:
+                                                printf("");
+                                                break;
+                                            case 3:
+                                                printf("");
+                                                break;
+                                            case 2:
+                                                printf("");
+                                                break;
+                                            case 1:
+                                                printf("");
+                                                break;
+                                        }
+                                    }else if (sd4 > 0 ){
+                                        switch(sd4){
+                                            case 9:
+                                                printf("nove ");
+                                                break;
+                                            case 8:
+                                                printf("oito ");
+                                                break;
+                                            case 7:
+                                                printf("sete ");
+                                                break;
+                                            case 6:
+                                                printf("seis ");
+                                                break;
+                                            case 5:
+                                                printf("cinco ");
+                                                break;
+                                            case 4:
+                                                printf("quatro ");
+                                                break;
+                                            case 3:
+                                                printf("tres ");
+                                                break;
+                                            case 2:
+                                                printf("dois ");
+                                                break;
+                                            case 1:
+                                                printf("um ");
+                                                break;
+                                        }
+                                    }
+                                }
+                                if ((sd3 == 0 && sd2 == 0 && sd1 == 0) && (sd6 > 0 || sd5 > 0 || sd4 > 0)){//possibilidades de acontecer numeros "Truncados"
+                                    printf("mil ");                            
+                                }else if ((sd6 != 0 || sd5 != 0 || sd4 != 0) && (sd3 != 0 || sd2 != 0 || sd1 !=0)){
+                                    printf("mil e ");
+                                }else {
+                                    printf("");
+                                }//FIM DO MILHAR
+                                //Centena
+                                if (sd3 >= 0){
+                                    if (sd3 == 0){
+                                        printf("");
+                                    }
+                                    if (sd3 > 0 && sd2 == 0 && sd1 == 0){
+                                        switch(sd3){
+                                            case 9:
+                                                printf("novecentos ");
+                                                break;
+                                            case 8:
+                                                printf("oitocentos ");
+                                                break;
+                                            case 7:
+                                                printf("setecentos ");
+                                                break;
+                                            case 6:
+                                                printf("seiscentos ");
+                                                break;
+                                            case 5:
+                                                printf("quinhentos ");
+                                                break;
+                                            case 4:
+                                                printf("quatrocentos ");
+                                                break;
+                                            case 3:
+                                                printf("trezentos ");
+                                                break;
+                                            case 2:
+                                                printf("duzentos ");
+                                                break;
+                                            case 1:
+                                                printf("cem ");
+                                                break;
+                                        }
+                                    }
+                                    if (sd3 > 0 && sd2 > 0 || sd1 >0){
+                                        switch(sd3){
+                                            case 9:
+                                                printf("novecentos e ");
+                                                break;
+                                            case 8:
+                                                printf("oitocentos e ");
+                                                break;
+                                            case 7:
+                                                printf("setecentos e ");
+                                                break;
+                                            case 6:
+                                                printf("seiscentos e ");
+                                                break;
+                                            case 5:
+                                                printf("quinhentos e ");
+                                                break;
+                                            case 4:
+                                                printf("quatrocentos e ");
+                                                break;
+                                            case 3:
+                                                printf("trezentos e ");
+                                                break;
+                                            case 2:
+                                                printf("duzentos e ");
+                                                break;
+                                            case 1:
+                                                printf("cento e ");
+                                                break;
+                                        }
+                                    }
+                                }
+                                //Dezena
+                                if (sd2 >= 0){
+                                    if (sd2 == 0){
+                                        printf("");
+                                    }
+                                    if (sd2 > 0 && sd1 == 0){
+                                        switch(sd2){
+                                            case 9:
+                                                printf("noventa ");
+                                                break;
+                                            case 8:
+                                                printf("oitenta ");
+                                                break;
+                                            case 7:
+                                                printf("setenta ");
+                                                break;
+                                            case 6:
+                                                printf("sessenta ");
+                                                break;
+                                            case 5:
+                                                printf("cinquenta ");
+                                                break;
+                                            case 4:
+                                                printf("quarenta ");
+                                                break;
+                                            case 3:
+                                                printf("trinta ");
+                                                break;
+                                            case 2:
+                                                printf("vinte ");
+                                                break;
+                                            case 1:
+                                                printf("dez ");
+                                                break;
+                                        }
+                                    }else if (sd2 > 0 && sd1 > 0){
+                                        switch(sd2){
+                                            case 9:
+                                                printf("noventa e ");
+                                                break;
+                                            case 8:
+                                                printf("oitenta e ");
+                                                break;
+                                            case 7:
+                                                printf("setenta e ");
+                                                break;
+                                            case 6:
+                                                printf("sessenta e ");
+                                                break;
+                                            case 5:
+                                                printf("cinquenta e ");
+                                                break;
+                                            case 4:
+                                                printf("quarenta e ");
+                                                break;
+                                            case 3:
+                                                printf("trinta e ");
+                                                break;
+                                            case 2:
+                                                printf("vinte e ");
+                                                break;
+                                            case 1:
+                                                if (sd1 > 5)
+                                                {
+                                                    printf("dez"); //O dez e um caso especial infelizmente, so pra ferrar minha vida
+                                                }else if (sd1 == 5){
+                                                    printf("quinze ");
+                                                }else if (sd1 == 4){
+                                                    printf("quatorze ");
+                                                }else if (sd1 == 3){
+                                                    printf("treze ");
+                                                }else if (sd1 == 2){
+                                                    printf("doze ");
+                                                }else if (sd1 == 1){
+                                                    printf("onze ");
+                                                }else{
+                                                    printf("dez ");
+                                                }
+                                                break;
+                                        }
+                                    }
+                                    //Unidade
+                                    if (sd1 >= 0){
+                                        if (sd1 == 0){
+                                            printf("");
+                                        }
+                                        if (sd1 > 0 && sd2 == 1){
+                                            switch(sd1){
+                                                case 9:
+                                                    printf("enove ");
+                                                    break;
+                                                case 8:
+                                                    printf("eoito ");
+                                                    break;
+                                                case 7:
+                                                    printf("essete ");
+                                                    break;
+                                                case 6:
+                                                    printf("esseis ");
+                                                    break;
+                                                case 5:
+                                                    printf("");
+                                                    break;
+                                                case 4:
+                                                    printf("");
+                                                    break;
+                                                case 3:
+                                                    printf("");
+                                                    break;
+                                                case 2:
+                                                    printf("");
+                                                    break;
+                                                case 1:
+                                                    printf("");
+                                                    break;
+                                            }
+                                        }else if (sd1 > 0 ){
+                                            switch(sd1){
+                                                case 9:
+                                                    printf("nove ");
+                                                    break;
+                                                case 8:
+                                                    printf("oito ");
+                                                    break;
+                                                case 7:
+                                                    printf("sete ");
+                                                    break;
+                                                case 6:
+                                                    printf("seis ");
+                                                    break;
+                                                case 5:
+                                                    printf("cinco ");
+                                                    break;
+                                                case 4:
+                                                    printf("quatro ");
+                                                    break;
+                                                case 3:
+                                                    printf("tres ");
+                                                    break;
+                                                case 2:
+                                                    printf("dois ");
+                                                    break;
+                                                case 1:
+                                                    printf("um ");
+                                                    break;
+                                            }
+                                        }
+                                    }
+                                }
+                                //espera
+                                if (saque_total == 1){
+                                    printf("real.\n");
+                                }else if (saque_total == 0){ //caso nao haja notas para sacar
+                                    printf("Ainda nao foi sacado dinheiro\n");
+                                }else{
+                                    printf("reais.\n");
+                                }
+                                //Copia do bloco do saque
                                 system("pause");
                                 break;
                         case 2: printf("\nVocê escolheu a opção %d\n",opc2);
-                                printf("O valor total no caixa e : %d \n", caixa);
+                                printf("O valor total no caixa e : %d R$ ou  \n", caixa);
+                                sd6 = (caixa / 100000) % 10;  //Da esquerda pra direita
+                                sd5 = (caixa / 10000) % 10;
+                                sd4 = (caixa / 1000) % 10;
+                                sd3 = (caixa / 100) % 10;
+                                sd2 = (caixa / 10) % 10;
+                                sd1 = (caixa) % 10;
+                                //Debug
+                                if (caixa != 0){
+                                    printf("\nAinda ha ");
+                                }else{
+                                    printf("");
+                                }
+                                //Centena de milhar
+                                if (sd6 >= 0){
+                                    if (sd6 > 0 && sd5 == 0 && sd4 == 0 ){
+                                        printf("cem " );
+                                    }else if(sd6 > 0 && sd5 != 0 && sd4 != 0){
+                                        printf("cento e ");
+                                    }else{
+                                        printf("");
+                                    }
+                                }
+                                //Dezena de milhar
+                                if (sd5 >= 0){
+                                    if (sd5 == 0){
+                                        printf("");
+                                    }
+                                    if (sd5 > 0 && sd4 == 0){
+                                        switch(sd5){
+                                            case 9:
+                                                printf("noventa ");
+                                                break;
+                                            case 8:
+                                                printf("oitenta ");
+                                                break;
+                                            case 7:
+                                                printf("setenta ");
+                                                break;
+                                            case 6:
+                                                printf("sessenta ");
+                                                break;
+                                            case 5:
+                                                printf("cinquenta ");
+                                                break;
+                                            case 4:
+                                                printf("quarenta ");
+                                                break;
+                                            case 3:
+                                                printf("trinta ");
+                                                break;
+                                            case 2:
+                                                printf("vinte ");
+                                                break;
+                                            case 1:
+                                                printf("dez ");
+                                                break;
+                                        }
+                                    }else if (sd5 > 0 && sd4 > 0){
+                                        switch(sd5){
+                                            case 9:
+                                                printf("noventa e ");
+                                                break;
+                                            case 8:
+                                                printf("oitenta e ");
+                                                break;
+                                            case 7:
+                                                printf("setenta e ");
+                                                break;
+                                            case 6:
+                                                printf("sessenta e ");
+                                                break;
+                                            case 5:
+                                                printf("cinquenta e ");
+                                                break;
+                                            case 4:
+                                                printf("quarenta e ");
+                                                break;
+                                            case 3:
+                                                printf("trinta e ");
+                                                break;
+                                            case 2:
+                                                printf("vinte e ");
+                                                break;
+                                            case 1:
+                                                if (sd4 > 5)
+                                                {
+                                                    printf("dez"); //O dez e um caso especial infelizmente, so pra ferrar minha vida
+                                                }else if (sd4 == 5){
+                                                    printf("quinze ");
+                                                }else if (sd4 == 4){
+                                                    printf("quatorze ");
+                                                }else if (sd4 == 3){
+                                                    printf("treze ");
+                                                }else if (sd4 == 2){
+                                                    printf("doze ");
+                                                }else if (sd4 == 1){
+                                                    printf("onze ");
+                                                }else{
+                                                    printf("dez ");
+                                                }
+                                                break;
+                                        }
+                                    }
+                                }
+                                //Unidade de milhar
+                                if (sd4 >= 0){
+                                    if (sd4 == 0){
+                                        printf("");
+                                    }
+                                    if (sd4 > 0 && sd5 == 1){
+                                        switch(sd4){
+                                            case 9:
+                                                printf("enove ");
+                                                break;
+                                            case 8:
+                                                printf("eoito ");
+                                                break;
+                                            case 7:
+                                                printf("essete ");
+                                                break;
+                                            case 6:
+                                                printf("esseis ");
+                                                break;
+                                            case 5:
+                                                printf("");
+                                                break;
+                                            case 4:
+                                                printf("");
+                                                break;
+                                            case 3:
+                                                printf("");
+                                                break;
+                                            case 2:
+                                                printf("");
+                                                break;
+                                            case 1:
+                                                printf("");
+                                                break;
+                                        }
+                                    }else if (sd4 > 0 ){
+                                        switch(sd4){
+                                            case 9:
+                                                printf("nove ");
+                                                break;
+                                            case 8:
+                                                printf("oito ");
+                                                break;
+                                            case 7:
+                                                printf("sete ");
+                                                break;
+                                            case 6:
+                                                printf("seis ");
+                                                break;
+                                            case 5:
+                                                printf("cinco ");
+                                                break;
+                                            case 4:
+                                                printf("quatro ");
+                                                break;
+                                            case 3:
+                                                printf("tres ");
+                                                break;
+                                            case 2:
+                                                printf("dois ");
+                                                break;
+                                            case 1:
+                                                printf("um ");
+                                                break;
+                                        }
+                                    }
+                                }
+                                if ((sd3 == 0 && sd2 == 0 && sd1 == 0) && (sd6 > 0 || sd5 > 0 || sd4 > 0)){//possibilidades de acontecer numeros "Truncados"
+                                    printf("mil ");                            
+                                }else if ((sd6 != 0 || sd5 != 0 || sd4 != 0) && (sd3 != 0 || sd2 != 0 || sd1 !=0)){
+                                    printf("mil e ");
+                                }else {
+                                    printf("");
+                                }//FIM DO MILHAR
+                                //Centena
+                                if (sd3 >= 0){
+                                    if (sd3 == 0){
+                                        printf("");
+                                    }
+                                    if (sd3 > 0 && sd2 == 0 && sd1 == 0){
+                                        switch(sd3){
+                                            case 9:
+                                                printf("novecentos ");
+                                                break;
+                                            case 8:
+                                                printf("oitocentos ");
+                                                break;
+                                            case 7:
+                                                printf("setecentos ");
+                                                break;
+                                            case 6:
+                                                printf("seiscentos ");
+                                                break;
+                                            case 5:
+                                                printf("quinhentos ");
+                                                break;
+                                            case 4:
+                                                printf("quatrocentos ");
+                                                break;
+                                            case 3:
+                                                printf("trezentos ");
+                                                break;
+                                            case 2:
+                                                printf("duzentos ");
+                                                break;
+                                            case 1:
+                                                printf("cem ");
+                                                break;
+                                        }
+                                    }
+                                    if (sd3 > 0 && sd2 > 0 || sd1 >0){
+                                        switch(sd3){
+                                            case 9:
+                                                printf("novecentos e ");
+                                                break;
+                                            case 8:
+                                                printf("oitocentos e ");
+                                                break;
+                                            case 7:
+                                                printf("setecentos e ");
+                                                break;
+                                            case 6:
+                                                printf("seiscentos e ");
+                                                break;
+                                            case 5:
+                                                printf("quinhentos e ");
+                                                break;
+                                            case 4:
+                                                printf("quatrocentos e ");
+                                                break;
+                                            case 3:
+                                                printf("trezentos e ");
+                                                break;
+                                            case 2:
+                                                printf("duzentos e ");
+                                                break;
+                                            case 1:
+                                                printf("cento e ");
+                                                break;
+                                        }
+                                    }
+                                }
+                                //Dezena
+                                if (sd2 >= 0){
+                                    if (sd2 == 0){
+                                        printf("");
+                                    }
+                                    if (sd2 > 0 && sd1 == 0){
+                                        switch(sd2){
+                                            case 9:
+                                                printf("noventa ");
+                                                break;
+                                            case 8:
+                                                printf("oitenta ");
+                                                break;
+                                            case 7:
+                                                printf("setenta ");
+                                                break;
+                                            case 6:
+                                                printf("sessenta ");
+                                                break;
+                                            case 5:
+                                                printf("cinquenta ");
+                                                break;
+                                            case 4:
+                                                printf("quarenta ");
+                                                break;
+                                            case 3:
+                                                printf("trinta ");
+                                                break;
+                                            case 2:
+                                                printf("vinte ");
+                                                break;
+                                            case 1:
+                                                printf("dez ");
+                                                break;
+                                        }
+                                    }else if (sd2 > 0 && sd1 > 0){
+                                        switch(sd2){
+                                            case 9:
+                                                printf("noventa e ");
+                                                break;
+                                            case 8:
+                                                printf("oitenta e ");
+                                                break;
+                                            case 7:
+                                                printf("setenta e ");
+                                                break;
+                                            case 6:
+                                                printf("sessenta e ");
+                                                break;
+                                            case 5:
+                                                printf("cinquenta e ");
+                                                break;
+                                            case 4:
+                                                printf("quarenta e ");
+                                                break;
+                                            case 3:
+                                                printf("trinta e ");
+                                                break;
+                                            case 2:
+                                                printf("vinte e ");
+                                                break;
+                                            case 1:
+                                                if (sd1 > 5)
+                                                {
+                                                    printf("dez"); //O dez e um caso especial infelizmente, so pra ferrar minha vida
+                                                }else if (sd1 == 5){
+                                                    printf("quinze ");
+                                                }else if (sd1 == 4){
+                                                    printf("quatorze ");
+                                                }else if (sd1 == 3){
+                                                    printf("treze ");
+                                                }else if (sd1 == 2){
+                                                    printf("doze ");
+                                                }else if (sd1 == 1){
+                                                    printf("onze ");
+                                                }else{
+                                                    printf("dez ");
+                                                }
+                                                break;
+                                        }
+                                    }
+                                    //Unidade
+                                    if (sd1 >= 0){
+                                        if (sd1 == 0){
+                                            printf("");
+                                        }
+                                        if (sd1 > 0 && sd2 == 1){
+                                            switch(sd1){
+                                                case 9:
+                                                    printf("enove ");
+                                                    break;
+                                                case 8:
+                                                    printf("eoito ");
+                                                    break;
+                                                case 7:
+                                                    printf("essete ");
+                                                    break;
+                                                case 6:
+                                                    printf("esseis ");
+                                                    break;
+                                                case 5:
+                                                    printf("");
+                                                    break;
+                                                case 4:
+                                                    printf("");
+                                                    break;
+                                                case 3:
+                                                    printf("");
+                                                    break;
+                                                case 2:
+                                                    printf("");
+                                                    break;
+                                                case 1:
+                                                    printf("");
+                                                    break;
+                                            }
+                                        }else if (sd1 > 0 ){
+                                            switch(sd1){
+                                                case 9:
+                                                    printf("nove ");
+                                                    break;
+                                                case 8:
+                                                    printf("oito ");
+                                                    break;
+                                                case 7:
+                                                    printf("sete ");
+                                                    break;
+                                                case 6:
+                                                    printf("seis ");
+                                                    break;
+                                                case 5:
+                                                    printf("cinco ");
+                                                    break;
+                                                case 4:
+                                                    printf("quatro ");
+                                                    break;
+                                                case 3:
+                                                    printf("tres ");
+                                                    break;
+                                                case 2:
+                                                    printf("dois ");
+                                                    break;
+                                                case 1:
+                                                    printf("um ");
+                                                    break;
+                                            }
+                                        }
+                                    }
+                                }
+                                //espera
+                                if (caixa == 1){
+                                    printf("real no caixa.\n");
+                                }else if (caixa == 0){ //caso nao haja notas para sacar
+                                    printf("Nao ha dinheiro no caixa.\n");
+                                }else{
+                                    printf("reais no caixa.\n");
+                                }
                                 system("pause");
                                 break;
                         case 3: printf("\nVocê escolheu a opção %d\n",opc2);
                                 printf("A quantidade de notas existentes e : %d \n",notas_totais);
+                                sd6 = (notas_totais / 100000) % 10;  //Da esquerda pra direita
+                                sd5 = (notas_totais / 10000) % 10;
+                                sd4 = (notas_totais / 1000) % 10;
+                                sd3 = (notas_totais / 100) % 10;
+                                sd2 = (notas_totais / 10) % 10;
+                                sd1 = (notas_totais) % 10;
+                                //Debug
+                                if (notas_totais != 0){
+                                    printf("\nFoi sacado");
+                                }else{
+                                    printf("");
+                                }
+                                //Centena de milhar
+                                if (sd6 >= 0){
+                                    if (sd6 > 0 && sd5 == 0 && sd4 == 0 ){
+                                        printf("cem " );
+                                    }else if(sd6 > 0 && sd5 != 0 && sd4 != 0){
+                                        printf("cento e ");
+                                    }else{
+                                        printf("");
+                                    }
+                                }
+                                //Dezena de milhar
+                                if (sd5 >= 0){
+                                    if (sd5 == 0){
+                                        printf("");
+                                    }
+                                    if (sd5 > 0 && sd4 == 0){
+                                        switch(sd5){
+                                            case 9:
+                                                printf("noventa ");
+                                                break;
+                                            case 8:
+                                                printf("oitenta ");
+                                                break;
+                                            case 7:
+                                                printf("setenta ");
+                                                break;
+                                            case 6:
+                                                printf("sessenta ");
+                                                break;
+                                            case 5:
+                                                printf("cinquenta ");
+                                                break;
+                                            case 4:
+                                                printf("quarenta ");
+                                                break;
+                                            case 3:
+                                                printf("trinta ");
+                                                break;
+                                            case 2:
+                                                printf("vinte ");
+                                                break;
+                                            case 1:
+                                                printf("dez ");
+                                                break;
+                                        }
+                                    }else if (sd5 > 0 && sd4 > 0){
+                                        switch(sd5){
+                                            case 9:
+                                                printf("noventa e ");
+                                                break;
+                                            case 8:
+                                                printf("oitenta e ");
+                                                break;
+                                            case 7:
+                                                printf("setenta e ");
+                                                break;
+                                            case 6:
+                                                printf("sessenta e ");
+                                                break;
+                                            case 5:
+                                                printf("cinquenta e ");
+                                                break;
+                                            case 4:
+                                                printf("quarenta e ");
+                                                break;
+                                            case 3:
+                                                printf("trinta e ");
+                                                break;
+                                            case 2:
+                                                printf("vinte e ");
+                                                break;
+                                            case 1:
+                                                if (sd4 > 5)
+                                                {
+                                                    printf("dez"); //O dez e um caso especial infelizmente, so pra ferrar minha vida
+                                                }else if (sd4 == 5){
+                                                    printf("quinze ");
+                                                }else if (sd4 == 4){
+                                                    printf("quatorze ");
+                                                }else if (sd4 == 3){
+                                                    printf("treze ");
+                                                }else if (sd4 == 2){
+                                                    printf("doze ");
+                                                }else if (sd4 == 1){
+                                                    printf("onze ");
+                                                }else{
+                                                    printf("dez ");
+                                                }
+                                                break;
+                                        }
+                                    }
+                                }
+                                //Unidade de milhar
+                                if (sd4 >= 0){
+                                    if (sd4 == 0){
+                                        printf("");
+                                    }
+                                    if (sd4 > 0 && sd5 == 1){
+                                        switch(sd4){
+                                            case 9:
+                                                printf("enove ");
+                                                break;
+                                            case 8:
+                                                printf("eoito ");
+                                                break;
+                                            case 7:
+                                                printf("essete ");
+                                                break;
+                                            case 6:
+                                                printf("esseis ");
+                                                break;
+                                            case 5:
+                                                printf("");
+                                                break;
+                                            case 4:
+                                                printf("");
+                                                break;
+                                            case 3:
+                                                printf("");
+                                                break;
+                                            case 2:
+                                                printf("");
+                                                break;
+                                            case 1:
+                                                printf("");
+                                                break;
+                                        }
+                                    }else if (sd4 > 0 ){
+                                        switch(sd4){
+                                            case 9:
+                                                printf("nove ");
+                                                break;
+                                            case 8:
+                                                printf("oito ");
+                                                break;
+                                            case 7:
+                                                printf("sete ");
+                                                break;
+                                            case 6:
+                                                printf("seis ");
+                                                break;
+                                            case 5:
+                                                printf("cinco ");
+                                                break;
+                                            case 4:
+                                                printf("quatro ");
+                                                break;
+                                            case 3:
+                                                printf("tres ");
+                                                break;
+                                            case 2:
+                                                printf("dois ");
+                                                break;
+                                            case 1:
+                                                printf("um ");
+                                                break;
+                                        }
+                                    }
+                                }
+                                if ((sd3 == 0 && sd2 == 0 && sd1 == 0) && (sd6 > 0 || sd5 > 0 || sd4 > 0)){//possibilidades de acontecer numeros "Truncados"
+                                    printf("mil ");                            
+                                }else if ((sd6 != 0 || sd5 != 0 || sd4 != 0) && (sd3 != 0 || sd2 != 0 || sd1 !=0)){
+                                    printf("mil e ");
+                                }else {
+                                    printf("");
+                                }//FIM DO MILHAR
+                                //Centena
+                                if (sd3 >= 0){
+                                    if (sd3 == 0){
+                                        printf("");
+                                    }
+                                    if (sd3 > 0 && sd2 == 0 && sd1 == 0){
+                                        switch(sd3){
+                                            case 9:
+                                                printf("novecentos ");
+                                                break;
+                                            case 8:
+                                                printf("oitocentos ");
+                                                break;
+                                            case 7:
+                                                printf("setecentos ");
+                                                break;
+                                            case 6:
+                                                printf("seiscentos ");
+                                                break;
+                                            case 5:
+                                                printf("quinhentos ");
+                                                break;
+                                            case 4:
+                                                printf("quatrocentos ");
+                                                break;
+                                            case 3:
+                                                printf("trezentos ");
+                                                break;
+                                            case 2:
+                                                printf("duzentos ");
+                                                break;
+                                            case 1:
+                                                printf("cem ");
+                                                break;
+                                        }
+                                    }
+                                    if (sd3 > 0 && sd2 > 0 || sd1 >0){
+                                        switch(sd3){
+                                            case 9:
+                                                printf("novecentos e ");
+                                                break;
+                                            case 8:
+                                                printf("oitocentos e ");
+                                                break;
+                                            case 7:
+                                                printf("setecentos e ");
+                                                break;
+                                            case 6:
+                                                printf("seiscentos e ");
+                                                break;
+                                            case 5:
+                                                printf("quinhentos e ");
+                                                break;
+                                            case 4:
+                                                printf("quatrocentos e ");
+                                                break;
+                                            case 3:
+                                                printf("trezentos e ");
+                                                break;
+                                            case 2:
+                                                printf("duzentos e ");
+                                                break;
+                                            case 1:
+                                                printf("cento e ");
+                                                break;
+                                        }
+                                    }
+                                }
+                                //Dezena
+                                if (sd2 >= 0){
+                                    if (sd2 == 0){
+                                        printf("");
+                                    }
+                                    if (sd2 > 0 && sd1 == 0){
+                                        switch(sd2){
+                                            case 9:
+                                                printf("noventa ");
+                                                break;
+                                            case 8:
+                                                printf("oitenta ");
+                                                break;
+                                            case 7:
+                                                printf("setenta ");
+                                                break;
+                                            case 6:
+                                                printf("sessenta ");
+                                                break;
+                                            case 5:
+                                                printf("cinquenta ");
+                                                break;
+                                            case 4:
+                                                printf("quarenta ");
+                                                break;
+                                            case 3:
+                                                printf("trinta ");
+                                                break;
+                                            case 2:
+                                                printf("vinte ");
+                                                break;
+                                            case 1:
+                                                printf("dez ");
+                                                break;
+                                        }
+                                    }else if (sd2 > 0 && sd1 > 0){
+                                        switch(sd2){
+                                            case 9:
+                                                printf("noventa e ");
+                                                break;
+                                            case 8:
+                                                printf("oitenta e ");
+                                                break;
+                                            case 7:
+                                                printf("setenta e ");
+                                                break;
+                                            case 6:
+                                                printf("sessenta e ");
+                                                break;
+                                            case 5:
+                                                printf("cinquenta e ");
+                                                break;
+                                            case 4:
+                                                printf("quarenta e ");
+                                                break;
+                                            case 3:
+                                                printf("trinta e ");
+                                                break;
+                                            case 2:
+                                                printf("vinte e ");
+                                                break;
+                                            case 1:
+                                                if (sd1 > 5)
+                                                {
+                                                    printf("dez"); //O dez e um caso especial infelizmente, so pra ferrar minha vida
+                                                }else if (sd1 == 5){
+                                                    printf("quinze ");
+                                                }else if (sd1 == 4){
+                                                    printf("quatorze ");
+                                                }else if (sd1 == 3){
+                                                    printf("treze ");
+                                                }else if (sd1 == 2){
+                                                    printf("doze ");
+                                                }else if (sd1 == 1){
+                                                    printf("onze ");
+                                                }else{
+                                                    printf("dez ");
+                                                }
+                                                break;
+                                        }
+                                    }
+                                    //Unidade
+                                    if (sd1 >= 0){
+                                        if (sd1 == 0){
+                                            printf("");
+                                        }
+                                        if (sd1 > 0 && sd2 == 1){
+                                            switch(sd1){
+                                                case 9:
+                                                    printf("enove ");
+                                                    break;
+                                                case 8:
+                                                    printf("eoito ");
+                                                    break;
+                                                case 7:
+                                                    printf("essete ");
+                                                    break;
+                                                case 6:
+                                                    printf("esseis ");
+                                                    break;
+                                                case 5:
+                                                    printf("");
+                                                    break;
+                                                case 4:
+                                                    printf("");
+                                                    break;
+                                                case 3:
+                                                    printf("");
+                                                    break;
+                                                case 2:
+                                                    printf("");
+                                                    break;
+                                                case 1:
+                                                    printf("");
+                                                    break;
+                                            }
+                                        }else if (sd1 > 0 ){
+                                            switch(sd1){
+                                                case 9:
+                                                    printf("nove ");
+                                                    break;
+                                                case 8:
+                                                    printf("oito ");
+                                                    break;
+                                                case 7:
+                                                    printf("sete ");
+                                                    break;
+                                                case 6:
+                                                    printf("seis ");
+                                                    break;
+                                                case 5:
+                                                    printf("cinco ");
+                                                    break;
+                                                case 4:
+                                                    printf("quatro ");
+                                                    break;
+                                                case 3:
+                                                    printf("tres ");
+                                                    break;
+                                                case 2:
+                                                    printf("dois ");
+                                                    break;
+                                                case 1:
+                                                    printf("uma ");
+                                                    break;
+                                            }
+                                        }
+                                    }
+                                }
+                                //espera
+                                if (notas_totais == 1){
+                                    printf("nota.\n");
+                                }else if (notas_totais == 0){ //caso nao haja notas para sacar
+                                    printf("Nao ha notas no caixa.\n");
+                                }else{
+                                    printf("notas no caixa.\n");
+                                }
                                 printf("Notas de 450: %d\n",qnt_notas_450);
                                 printf("Notas de 250: %d\n",qnt_notas_250);
                                 printf("Notas de 50: %d\n",qnt_notas_50);
