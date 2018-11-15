@@ -1,5 +1,0 @@
-rem @echo off
-rem echo Copying...
-
-#!/bin/bash          
-echo Hello World 
