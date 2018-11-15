@@ -1,0 +1,395 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"car",
+				"carro.dbf"
+			],
+			[
+				"op",
+				"opcional"
+			],
+			[
+				"ano",
+				"ano_modelo"
+			],
+			[
+				"ano_",
+				"ano_fabricacao"
+			],
+			[
+				"estru",
+				"estruturas"
+			],
+			[
+				"carro",
+				"CARRO"
+			],
+			[
+				"b",
+				"b"
+			],
+			[
+				"prt",
+				"prtnome"
+			],
+			[
+				"y",
+				"y"
+			],
+			[
+				"pnt",
+				"pntY2"
+			],
+			[
+				"PNTY",
+				"pntY1"
+			],
+			[
+				"pn",
+				"pntX2"
+			],
+			[
+				"backg",
+				"background-color\tproperty"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/C++/C++ Single File.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"Colorsublime: Install Theme"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 415.584415584,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/lucas/Projects",
+		"/home/lucas/Projects/C",
+		"/home/lucas/Projects/C/MD",
+		"/home/lucas/Projects/C/T8"
+	],
+	"file_history":
+	[
+		"/home/lucas/Projects/C/MD/MD_1.c",
+		"/home/lucas/Projects/C/MD/primos.c",
+		"/home/lucas/Projects/C/T10/cod.linux/playground.c",
+		"/home/lucas/Projects/C/T8/ascii.txt",
+		"/home/lucas/Projects/C/T10/cod.linux/unit.h",
+		"/home/lucas/Projects/C/T8/printa_ascii.c",
+		"/home/lucas/Projects/C/T10/T10.pdf",
+		"/home/lucas/Projects/C/T9/main.c",
+		"/home/lucas/Projects/C/T9/carro.ord",
+		"/home/lucas/Projects/C/T9/LISTAO.txt",
+		"/home/lucas/Projects/C/T9/Algo.c",
+		"/home/lucas/Projects/C/T9/test.c",
+		"/home/lucas/Switch-Backup-Manager-master/README.md",
+		"/etc/pacman.conf",
+		"/home/lucas/Switch/XCI to NSP/config.mk.template",
+		"/run/media/lucas/4D54-B6F0/BCT.ini",
+		"/run/media/lucas/4D54-B6F0/switch/kezplez-nx/keys.txt",
+		"/home/lucas/Switch-Backup-Manager-master/missinggames.xslt",
+		"/home/lucas/Projects/C/T9/test",
+		"/home/lucas/Projects/C/T9/paocombatata.poi",
+		"/home/lucas/Projects/C/T9/carro.dbf.tags",
+		"/home/lucas/Projects/C/T9/carro.dbf",
+		"/home/lucas/Projects/C/T8/aliteracao.c",
+		"/home/lucas/Projects/C/T8/ali2.c",
+		"/etc/btfpd.conf",
+		"/home/lucas/Projects/C/T8/2356.c",
+		"/home/lucas/Projects/C/T8/2669.c",
+		"/home/lucas/Projects/C/T8/coco.c",
+		"/home/lucas/Downloads/2356.c",
+		"/home/lucas/Projects/C/T8/1742.c",
+		"/home/lucas/Projects/C/T8/cantada.c",
+		"/home/lucas/Projects/C/T8/Grafico.py",
+		"/home/lucas/Projects/C/T8/prova.c",
+		"/home/lucas/Projects/C/T8/2062.c",
+		"/home/lucas/Projects/C/T8/2062.cpp",
+		"/home/lucas/Downloads/main(1).c",
+		"/home/lucas/Projects/C/T8/hum.py",
+		"/home/lucas/insta/insta.py",
+		"/home/lucas/insta/pyr.py",
+		"/home/lucas/Projects/C/T8/1263.c",
+		"/home/lucas/Desktop/insta.py",
+		"/home/lucas/Downloads/T7.c",
+		"/home/lucas/Projects/C/T6/codigo.linux/main",
+		"/home/lucas/Projects/C/T6/codigo.linux/main.c",
+		"/home/lucas/Projects/C/T6/codigo.linux/umteste.c",
+		"/home/lucas/Projects/C/T6/codigo.linux/myList.h",
+		"/home/lucas/Projects/C/ETC/strings_ex_04.c",
+		"/home/lucas/.config/sublime-text-3/Packages/User/AutoBackups (Linux).sublime-settings",
+		"/home/lucas/.config/sublime-text-3/Packages/AutoBackups/AutoBackups (Linux).sublime-settings",
+		"/home/lucas/Projects/C/T5/strings_ex_03.c",
+		"/home/lucas/Projects/C/T5/strings_ex_02.c",
+		"/home/lucas/Projects/C/T5/strings_ex_01.c",
+		"/home/lucas/Projects/C/T6/codigo.linux/myList.o",
+		"/home/lucas/Projects/C/T6/codigo.linux/myList.a",
+		"/etc/lightdm/lightdm-webkit2-greeter.conf",
+		"/var/lib/AccountsService/users/lucas",
+		"/home/lucas/file",
+		"/home/lucas/Downloads/Dama(1).c",
+		"/home/lucas/Projects/C/T5/uri_2808.c",
+		"/home/lucas/Projects/C/T5/uri_2787.c",
+		"/home/lucas/Projects/C/T5/test.c",
+		"/home/lucas/Downloads/CampodeMinhocas.c",
+		"/home/lucas/Downloads/Dama.c",
+		"/usr/lib/libanl.so",
+		"/home/lucas/Projects/test.c",
+		"/home/lucas/Projects/uri_1984.c",
+		"/home/lucas/Projects/Julia/hello_world.jl",
+		"/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/index.html",
+		"/usr/share/lightdm-webkit/themes/lightdm-webkit-theme-aether/src/css/style.css",
+		"/usr/share/lightdm-webkit/themes/litarvan/main.ng_meta.json",
+		"/usr/share/lightdm-webkit/themes/litarvan/styles.css",
+		"/usr/share/lightdm-webkit/themes/litarvan/index.html",
+		"/etc/lightdm/lightdm-mini-greeter.conf",
+		"/etc/lightdm/lightdm-mini-greeter.conf.pacsave",
+		"/usr/share/lightdm-webkit/themes/litarvan/main.dart",
+		"/home/lucas/wisp2/css/main.css",
+		"/home/lucas/Theme_sample/index.html",
+		"/home/lucas/wisp2/index.html",
+		"/home/lucas/Theme_sample/js/lightdm.js",
+		"/home/lucas/wisp2/js/main.js",
+		"/home/lucas/Theme_sample/styles.css",
+		"/home/lucas/Theme_sample/main.dart",
+		"/home/lucas/wisp/index.html",
+		"/home/lucas/wisp/css/main.css",
+		"/home/lucas/wisp/js/main.js",
+		"/usr/share/lightdm-webkit/themes/wisp/js/main.js",
+		"/usr/share/lightdm-webkit/themes/wisp/index.html",
+		"/home/lucas/Projects/reverse printing.c",
+		"/usr/share/lightdm-webkit/themes/antergos/index.html",
+		"/usr/share/lightdm-webkit/themes/antergos/js/greeter.js",
+		"/usr/share/lightdm-webkit/themes/wisp/css/main.css",
+		"/usr/share/lightdm-webkit/themes/wisp/index.theme",
+		"/home/lucas/Projects/main.c",
+		"/home/lucas/Projects/uri_1001.c",
+		"/etc/lightdm/lightdm.conf",
+		"/etc/lightdm/loghtdm.conf",
+		"/usr/share/applications/sublime_text.desktop"
+	],
+	"find":
+	{
+		"height": 40.959040959
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"combustiveis",
+			"var",
+			"#",
+			"png",
+			"*/\n",
+			"password",
+			"vader",
+			"vader\n",
+			"vader",
+			"vader\t",
+			"vader",
+			"bg.jpg",
+			"background",
+			"passwd",
+			"password",
+			"webkit_theme",
+			"greeter-session",
+			"user",
+			"greeter-session"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.971028971
+	},
+	"input":
+	{
+		"height": 221.782217782
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 213.786213786
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 120.883117676
+	},
+	"pinned_build_system": "",
+	"project": "Geral.sublime-project",
+	"replace":
+	{
+		"height": 53.9460539461
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 195.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,711 @@
+Linha 1:                     Delphi 7
+Linha 2:                  Release Notes
+Linha 3: 
+Linha 4: 
+Linha 5: =======================================================Linha 6: 
+Linha 7: 
+Linha 8: This file contains important supplementary and late-
+Linha 9: breaking information that may not appear in the main
+Linha 10: product documentation. We recommend that you read this
+Linha 11: file in its entirety.
+Linha 12: 
+Linha 13: For information on new features in this release, chooseLinha 14: 
+Linha 15: "What's New" in the online Help contents.
+Linha 16: 
+Linha 17: 
+Linha 18: =======================================================Linha 19: 
+Linha 20: CONTENTS
+Linha 21: 
+Linha 22: * OTHER RELEASE NOTES INCLUDED WITH THIS PRODUCT
+Linha 23: * NOTES AND ISSUES:
+Linha 24: * ABOUT EDITING THE REGISTRY
+Linha 25: * PRODUCT INFORMATION ON THE WEB
+Linha 26: 
+Linha 27: 
+Linha 28: =======================================================Linha 29: 
+Linha 30: OTHER RELEASE NOTES INCLUDED WITH THIS PRODUCT
+Linha 31: 
+Linha 32: * INSTALL contains system requirements and product
+Linha 33:   installation information.
+Linha 34: 
+Linha 35: * DEPLOY contains information about redistributing yourLinha 36: 
+Linha 37:   applications.
+Linha 38: 
+Linha 39: * LICENSE contains information on licensing allowances
+Linha 40:   and limitations for this product and other Borland
+Linha 41:   software that is bundled with it.
+Linha 42: 
+Linha 43:     The three files listed above, along with this file,Linha 44: 
+Linha 45:     are installed in your main product directory
+Linha 46:     (default: C:\Program Files\Borland\Delphi7).
+Linha 47: 
+Linha 48: =======================================================Linha 49: 
+Linha 50: NOTES AND ISSUES
+Linha 51: 
+Linha 52: Deprecated Components
+Linha 53: 
+Linha 54:     Borland is deprecating the use of TSQLClientDataSetLinha 55: 
+Linha 56:     and TBDEClientDataSet. Borland recommends that you
+Linha 57:     use TSimpleDataSet for simple, two-tier
+Linha 58:     applications. TSQLClientDataSet and
+Linha 59:     TBDEClientDataSet are no longer displayed on the
+Linha 60:     Component palette. If you require backward
+Linha 61:     compatibility, you can still access
+Linha 62:     TSQLClientDataSet and TBDEClientDataSet in the
+Linha 63:     Demos directory (by default, C:\Program
+Linha 64:     Files\Borland\Delphi7\Demos).
+Linha 65: 
+Linha 66: 
+Linha 67:     Borland is deprecating the use of the TServerSocketLinha 68: 
+Linha 69:     and TClientSocket from the unit ScktComp. It is
+Linha 70:     recommended that you use the Indy components for
+Linha 71:     socket operations. The TServerSocket and
+Linha 72:     TClientSocket will no longer be installed on the
+Linha 73:     component palette by default. If you require the
+Linha 74:     use of these components then you can install
+Linha 75:     the design time package named dclsockets70.bpl,
+Linha 76:     found in your bin directory. For deployment with
+Linha 77:     runtime packages, you will need to deploy rtl70.bplLinha 78: 
+Linha 79:     and any other required packages.
+Linha 80: 
+Linha 81: 
+Linha 82: Changes in StrUtils
+Linha 83: -------------------
+Linha 84: 
+Linha 85: The StrUtils unit contains three sets of changes, all
+Linha 86: relating to
+Linha 87: multi-byte character set (MBCS) support.
+Linha 88: 
+Linha 89:    * Previously, LeftStr, RightStr, and MidStr each
+Linha 90:      took and returned AnsiString values, and did not
+Linha 91:      support MBCS strings. Each of these functions has
+Linha 92:      been replaced by a pair of overloaded functions,
+Linha 93:      one that takes and returns AnsiString, and one
+Linha 94:      that takes and returns WideString. The new
+Linha 95:      functions correctly handle MBCS strings. This
+Linha 96:      change breaks code that uses these functions to
+Linha 97:      store and retrieve byte values in AnsiStrings.
+Linha 98:      Such code should use the new byte-level functions
+Linha 99:      described below.
+Linha 100: 
+Linha 101:    * New functions LeftBStr, RightBStr, and MidBStr
+Linha 102:      provide the byte-level manipulation previously
+Linha 103:      provided by LeftStr, RightStr, and MidStr.
+Linha 104: 
+Linha 105:    * New functions AnsiLeftStr, AnsiRightStr, and
+Linha 106:      AnsiMidStr are the same as the new AnsiStr
+Linha 107:      LeftStr, RightStr, and MidStr functions, except
+Linha 108:      that they are not overloaded with equivalent
+Linha 109:      WideString functions.
+Linha 110: 
+Linha 111: 
+Linha 112: XP Themes
+Linha 113: ---------
+Linha 114: 
+Linha 115: This build does not include a manifest for your
+Linha 116: projects. To tell your applications to use version 6.0
+Linha 117: of comctl32.dll you need to create and edit the
+Linha 118: manifest yourself.
+Linha 119: 
+Linha 120: There are two ways to do this:
+Linha 121: 
+Linha 122: 1. With a stand-alone manifest file added to the same
+Linha 123:    directory of the executable.
+Linha 124: 
+Linha 125: 2. With a manifest included in the executable as a
+Linha 126:    resource.
+Linha 127: 
+Linha 128: 
+Linha 129: For the stand-alone manifest follow these steps:
+Linha 130: 
+Linha 131: I) Using Notepad create a file called
+Linha 132:    "Project1.exe.manifest" and add the following lines:Linha 133: 
+Linha 134: 
+Linha 135: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>Linha 136: 
+Linha 137: <assembly xmlns="urn:schemas-microsoft-com:asm.v1"
+Linha 138: manifestVersion="1.0">
+Linha 139: <assemblyIdentity
+Linha 140: processorArchitecture="*"
+Linha 141: version="1.0.0.0"
+Linha 142: type="win32"
+Linha 143: name="Project1"/>
+Linha 144: <description>Project1 Description</description>
+Linha 145: <dependency>
+Linha 146: <dependentAssembly>
+Linha 147: <assemblyIdentity
+Linha 148: type="win32"
+Linha 149: name="Microsoft.Windows.Common-Controls"
+Linha 150: version="6.0.0.0"
+Linha 151: publicKeyToken="6595b64144ccf1df"
+Linha 152: language="*"
+Linha 153: processorArchitecture="*"   />
+Linha 154: </dependentAssembly>
+Linha 155: </dependency>
+Linha 156: </assembly>
+Linha 157: 
+Linha 158: II) Save the file and place it in the same directory asLinha 159: 
+Linha 160:     the application executable.
+Linha 161: 
+Linha 162: If you don't like the idea of having the manifest as a
+Linha 163: separated file you can include it into your executable
+Linha 164: as a resource.
+Linha 165: 
+Linha 166: I) Create a resource file (again using Notepad)
+Linha 167:    containing the following line:
+Linha 168: 
+Linha 169:    1 24 "Project1.exe.Manifest"
+Linha 170: 
+Linha 171: II) Compile the resource file with brcc32.exe with the
+Linha 172:     following command:
+Linha 173: 
+Linha 174:    C:\Project1> brcc32 WindowsXP.RC
+Linha 175: 
+Linha 176: III) Now add the following line to your project's main
+Linha 177:      form:
+Linha 178: 
+Linha 179:    {$R WindowsXP.RES}
+Linha 180: 
+Linha 181: 
+Linha 182: NOTE: To automatically configure XP Themes in your
+Linha 183:       project you can use the XP Application Wizard
+Linha 184:       demo. For more information see the readme file inLinha 185: 
+Linha 186: 
+Linha 187:        Demos\ToolsAPI\XPAppWiz
+Linha 188: 
+Linha 189: 
+Linha 190: .NET compiler warnings
+Linha 191: ----------------------
+Linha 192: 
+Linha 193: The Delphi 7 dcc32 compiler now supports three
+Linha 194: additional compiler warnings:  Unsafe_Type,
+Linha 195: Unsafe_Code, and Unsafe_Cast.  These warnings are
+Linha 196: disabled by default, but can be enabled with source
+Linha 197: code compiler directives {$WARN UNSAFE_CODE ON},
+Linha 198: compiler command line switches (dcc32 -W+UNSAFE_CODE),
+Linha 199: and in Project|Options.
+Linha 200: 
+Linha 201: NOTE: There is no space before or after the "+" in the
+Linha 202:       command line switch)
+Linha 203: 
+Linha 204: "Unsafe" in all three messages refers to types or
+Linha 205: operations which static code analysis cannot prove to
+Linha 206: not overwrite memory.  For example, data types that
+Linha 207: carry bounds information at runtime such as Delphi
+Linha 208: Strings or dynamic arrays can be bounds-checked at
+Linha 209: runtime, and tracked in static analysis, to ensure thatLinha 210: 
+Linha 211: memory accesses are within the limits of the allocated
+Linha 212: data.  Data types that do not carry bounds information
+Linha 213: at compile time or runtime (such as PChar) cannot be
+Linha 214: proven safe.  Unsafe doesn't necessarily mean the code
+Linha 215: is broken or flawed, it simply means that it uses
+Linha 216: programming techniques that cannot be verified as safe
+Linha 217: by static code analysis.  In a secured execution
+Linha 218: environment such as .NET, such code is assumed to be
+Linha 219: unsafe and a potential security risk.
+Linha 220: 
+Linha 221: Delphi 7 developers can use these new warnings to
+Linha 222: identify data types, code or programming techniques
+Linha 223: that may be difficult to port to a managed code
+Linha 224: environment such as .NET.  These messages are not
+Linha 225: specific to the .NET platform.  The warnings are
+Linha 226: conservative - some things we warn about in D7 we mightLinha 227: 
+Linha 228: actually be able to support in Delphi for .NET, but
+Linha 229: we're not sure yet.  The warnings are not complete -
+Linha 230: there may be problematic types or code situations for
+Linha 231: which the Delphi 7 compiler does not issue an unsafe
+Linha 232: warning.
+Linha 233: 
+Linha 234: Unsafe_Type:  Types such as PChar, untyped pointer,
+Linha 235: untyped var and out parameters, file of <type>, 6 byte
+Linha 236: reals (Real48), variant records (records containing
+Linha 237: overlapping fields) and old-style objects
+Linha 238: 
+Linha 239: ("TMyObject = object").
+Linha 240: 
+Linha 241:   * "old" object type
+Linha 242: 
+Linha 243:        c = object
+Linha 244:          i: Integer;
+Linha 245:          procedure p;
+Linha 246:        end;
+Linha 247: 
+Linha 248: Unsafe_Code:  absolute variables, Addr(), Ptr(), Hi(),
+Linha 249: Lo(), Swap() standard procedures, BlockRead and
+Linha 250: BlockWrite, the Fail() standard procedure, GetMem(),
+Linha 251: FreeMem(), and ReallocMem()
+Linha 252: 
+Linha 253:   * inline assembler blocks (asm end)
+Linha 254:   * @ operator
+Linha 255:   * modifying string index elements, e.g
+Linha 256: 
+Linha 257:       s := 'Hoho';
+Linha 258:       s[2] := 'a'; // <-- "Unsafe code 'String index toLinha 259: 
+Linha 260:       var param'"
+Linha 261: 
+Linha 262: Unsafe_Cast:  Casting an object instance to a type thatLinha 263: 
+Linha 264: is not an ancestor or descendent of the instance type,
+Linha 265: casting a record type to anything else
+Linha 266: 
+Linha 267: 
+Linha 268: Change to VCL SubComponents streaming
+Linha 269: -------------------------------------
+Linha 270: 
+Linha 271: In Delphi 7, we corrected a problem where the csLoadingLinha 272: 
+Linha 273: flag was never set for subcomponents, nor was the
+Linha 274: subcomponent's Loaded method called. When a component tLinha 275: hat
+Linha 276: has subcomponents is streamed, the subcomponents will hLinha 277: ave
+Linha 278: their csLoading flag set and their Loaded method calledLinha 279: .
+Linha 280: This change creates a complication for any subcomponentLinha 281: 
+Linha 282: properties that are writable. If you allow your
+Linha 283: subcomponent property to be assigned to an external
+Linha 284: component reference then you cannot free your subcomponLinha 285: ent
+Linha 286: until it's owner's Loaded method is called otherwise thLinha 287: e
+Linha 288: streaming system will attempt to call the subcomponent'Linha 289: s
+Linha 290: Loaded method after the subcomponent has been freed.
+Linha 291: 
+Linha 292: Apache
+Linha 293: ------
+Linha 294: 
+Linha 295: Support for Apache 2 is for the 2.0.39 version. It willLinha 296: 
+Linha 297: work with later versions as long as they are binary
+Linha 298: compatible.
+Linha 299: 
+Linha 300: NOTE: Due to a known bug with Apache 1.3.22, do not
+Linha 301:       develop CGI programs or shared objects for this
+Linha 302:       version.
+Linha 303: 
+Linha 304:       See http://bugs.apache.org/index.cgi/full/8538
+Linha 305: 
+Linha 306: 
+Linha 307: UDDI Registry entries
+Linha 308: ---------------------
+Linha 309: 
+Linha 310: Some UDDI Registry entries contain an Accesspoint URL wLinha 311: ith
+Linha 312: a bookmark tag at the end. When accessed these servicesLinha 313: 
+Linha 314: often generate the error message 'Method not allowed
+Linha 315: (405)'.
+Linha 316: 
+Linha 317: Workaround:
+Linha 318: 
+Linha 319: Remove the tag from url in the global function
+Linha 320: that returns the Interface:
+Linha 321: 
+Linha 322:      const
+Linha 323: //        defURL = 'http://someservice/somewhere#tag';
+Linha 324: //        is changed to
+Linha 325: 
+Linha 326:         defURL = 'http://someservice/somewhere';
+Linha 327: 
+Linha 328: 
+Linha 329: Japanese Input system on Windows XP
+Linha 330: -----------------------------------
+Linha 331: 
+Linha 332: The MS IME2002 Japanese input system included with
+Linha 333: Windows XP can cause the Debugger in the IDE to
+Linha 334: stall.
+Linha 335: 
+Linha 336: Workaround:
+Linha 337: 
+Linha 338: Remove Microsoft IME Character Code Dictionary from
+Linha 339: your system dictionaries list. Simply un-checking this
+Linha 340: option from the dictionary list will not solve the
+Linha 341: problem. To remove this dictionary:
+Linha 342: 
+Linha 343: 1) Open the IME Toolbar.
+Linha 344: 2) Select Tools|Properties and click on the Dictionary
+Linha 345:    tab.
+Linha 346: 3) Select "Microsoft IME Character Code Dictionary"
+Linha 347:    from the System dictionaries listbox
+Linha 348: 4) Click Remove.
+Linha 349: 
+Linha 350: 
+Linha 351: Database
+Linha 352: --------
+Linha 353: * The provided DB2 driver is certified for DB2 version
+Linha 354:   7 only. The client version and server version must
+Linha 355:   match. BDE also supports DB2 version 7 only.
+Linha 356: 
+Linha 357: * The Oracle driver provided for dbExpress components
+Linha 358:   is certified for Oracle 9i. BDE and ADO have been
+Linha 359:   certified with Oracle 8.1.7 and 8.1.6. In all cases,
+Linha 360:   the client version and server version must be the
+Linha 361:   same.
+Linha 362: 
+Linha 363: * Oracle 9i types - ORACLE 9i types TIMESTAMP
+Linha 364:   (introduced for JDK 1.3.1 compliance) and other typesLinha 365: 
+Linha 366:   like XMLType, Temp tables, etc. are not yet
+Linha 367:   supported. Use "DATE" instead.
+Linha 368: 
+Linha 369: * The Borland Database Engine CAB file (BDEINST.CAB) isLinha 370: 
+Linha 371:   no longer digitally signed. This CAB file is providedLinha 372: 
+Linha 373:   for backward compatibility. For new applications, we
+Linha 374:   recommend deploying BDE with the BDE merge modules.
+Linha 375: 
+Linha 376: InterBase version support, Dialect 3 features
+Linha 377: ---------------------------------------------
+Linha 378: 
+Linha 379: Delphi 7 supports InterBase 6.5. The client version andLinha 380: 
+Linha 381: server version must be the same.
+Linha 382: 
+Linha 383: Currently, the driver does not support the ARRAY type.
+Linha 384: 
+Linha 385: To use the new InterBase 6.5 Dialect 3 features in BDE,Linha 386: 
+Linha 387: add an entry to your Windows registry under
+Linha 388: 
+Linha 389:  HKEY_LOCAL_MACHINE\SOFTWARE\Borland\Database Engine
+Linha 390:  \Settings\Drivers\Intrbase\Db Open\SQLDIALECT
+Linha 391: 
+Linha 392: and set the String Value to "3".
+Linha 393: 
+Linha 394: When an InterBase alias is created, the new entry will
+Linha 395: be available in the .CFG file.
+Linha 396: 
+Linha 397: To use InterBase 5.6, SQLDIALECT can be set to "1"
+Linha 398: (existing IB aliases which do not have the SQLDIALECT
+Linha 399: entry default to SQLDIALECT=1 or to the registry
+Linha 400: setting when the SQLDIALECT entry is added to the
+Linha 401: registry).
+Linha 402: 
+Linha 403: 
+Linha 404: InterBase 6.5 implementation note
+Linha 405: ---------------------------------
+Linha 406: 
+Linha 407: If you are using a WebSnap application with InterBase
+Linha 408: 6.5, a local database connection is not recommended.
+Linha 409: Instead, use a client/server connection specified by a
+Linha 410: protocol-specific prefix to the path to the database.
+Linha 411: 
+Linha 412: Examples:
+Linha 413: 
+Linha 414: Local connection (not recommended):
+Linha 415:     C:\PathTo\Database\DBName.gdb
+Linha 416: 
+Linha 417: TCP/IP connection on Windows:
+Linha 418:     saturn:C:\PathTo\Database\DBName.gdb
+Linha 419: 
+Linha 420: TCP/IP connection on UNIX:
+Linha 421:     jupiter:/usr/PathTo/Database/DBName.gdb
+Linha 422: 
+Linha 423: NetBEUI connection:
+Linha 424:     \\venus\C:\PathTo\Database\DBName.gdb
+Linha 425: 
+Linha 426: IPX/SPX connection:
+Linha 427:     mars@vol2:\PathTo\Database\DBName.gdb
+Linha 428: 
+Linha 429: If the WebSnap application is on the same machine as
+Linha 430: the server, you can use localhost:
+Linha 431: 
+Linha 432:     localhost:C:\PathTo\Database\DBName.gdb
+Linha 433: 
+Linha 434: 
+Linha 435: INTERBASE driver behavioral difference:
+Linha 436: ---------------------------------------
+Linha 437: 
+Linha 438: NUMERIC data type mapping.
+Linha 439: 
+Linha 440: 
+Linha 441:    The dbExpress driver for INTERBASE  now maps NUMERICLinha 442: 
+Linha 443:    data types to fldBCD instead of fldINT16, fldINT32,
+Linha 444:    fldFLOAT.
+Linha 445: 
+Linha 446: 
+Linha 447: dbExpress
+Linha 448: ---------
+Linha 449: 
+Linha 450: TSQLDataSet now has DefaultRowsetSize = 20 (Oracle
+Linha 451: only). To use a different RowSetSize, add the
+Linha 452: RowSetSize property manually (e.g., "RowsetSize = 200")Linha 453: 
+Linha 454: into dbxconnections.ini, for existing connections, or
+Linha 455: into dbxdrivers.ini to have the RowSetSize property
+Linha 456: included in new connections. RowsetSize can also be
+Linha 457: modified in code, as shown here:
+Linha 458: 
+Linha 459:     "SQLConnection1.Params.Values['RowsetSize'] :=
+Linha 460:     '200'"
+Linha 461: 
+Linha 462: 
+Linha 463: dbExpress now includes MySQL 3.23.49 support with a newLinha 464: 
+Linha 465: driver (dbexpmysql.dll). To use the new driver, specifyLinha 466: 
+Linha 467: 
+Linha 468:     LibraryName = "dbexpmysql.dll"
+Linha 469: 
+Linha 470: in the Object Inspector or in dbxdrivers.ini.
+Linha 471: 
+Linha 472: 
+Linha 473: dbExpress components and MySQL transactions
+Linha 474: -------------------------------------------
+Linha 475: 
+Linha 476: MySQL doesn't support more than one active statement
+Linha 477: per connection. To perform multiple SQL requests with aLinha 478: 
+Linha 479: single TSQLConnection the dbExpress components clone
+Linha 480: connection. There is a bug in maintaining state
+Linha 481: information on the no.of active statements with respectLinha 482: 
+Linha 483: to a TSQLConnection. This might cause serious failures
+Linha 484: in transaction as the transaction might be started on
+Linha 485: one connection and commit or rollback might be
+Linha 486: happening on another connection.
+Linha 487: 
+Linha 488: Workaround:
+Linha 489: 
+Linha 490: Before you start a MySQL transaction make sure
+Linha 491: TSQLConnection.ActiveStatements is 0. If it's not 0 theLinha 492: n
+Linha 493: close the TSQLConnection and reopen it and that should
+Linha 494: clear it. All your transaction activity should then go
+Linha 495: on a single connection.
+Linha 496: 
+Linha 497: DB2 notes for dbExpress
+Linha 498: -----------------------
+Linha 499: 
+Linha 500: The provided DB2 driver is certified for DB2 version 7.Linha 501: 
+Linha 502: The client version and server version must be the
+Linha 503: same. BDE also supports DB2 version 7.
+Linha 504: 
+Linha 505: Because of a known DB2 bug, the DB2 client returns onlyLinha 506: 
+Linha 507: one record at a time when a request for a block fetch
+Linha 508: is made, even with RowsetSize option > 1.
+Linha 509: 
+Linha 510: Timestamp issues
+Linha 511: ----------------
+Linha 512: 
+Linha 513: The dbExpress DB2 driver rounds the TIMESTAMP
+Linha 514: fractional value and there could be some precision lostLinha 515: 
+Linha 516: depending upon the data retrieved. When you apply back
+Linha 517: changes the old value will not match the one on the
+Linha 518: server and ApplyUpdates() will fail.
+Linha 519: 
+Linha 520: Workaround:
+Linha 521: 
+Linha 522: Make sure DB2 TIMESTAMP is not part of indexed columns
+Linha 523: and set the DataSetProvider Update mode to WhereKey
+Linha 524: instead of WhereAll.
+Linha 525: 
+Linha 526: 
+Linha 527: Informix BLOB/CLOB fields (dbExpress)
+Linha 528: -------------------------------------
+Linha 529: 
+Linha 530: A new global variable, InformixLob, is available to
+Linha 531: allow you to work with Informix BLOB and CLOB fields.
+Linha 532: 
+Linha 533: The variable is required because Informix BLOB
+Linha 534: (fldBLOB, fldstHBINARY) and CLOB (fldBLOB, fldstHMEMO)
+Linha 535: fields are mapped as ftOraBlob and ftOraClob,
+Linha 536: respectively, and the DataSnap resolver performs
+Linha 537: special query generation when resolving Oracle
+Linha 538: BLOB/CLOB fields, but not when resolving Informix
+Linha 539: BLOB/CLOBs. To address this issue, set InformixLob
+Linha 540: to True when using Informix BLOB/CLOBs, and switch it
+Linha 541: back to False (the default) when using Oracle
+Linha 542: BLOB/CLOBs.
+Linha 543: 
+Linha 544: 
+Linha 545: NOTE: The new Informix driver (dbexpinf.dll) has been
+Linha 546:       tested with Informix version 9.2.1 client/server
+Linha 547:       and 9.2.1 client with SE server.
+Linha 548: 
+Linha 549: MSSQL driver - Known issues
+Linha 550: ---------------------------
+Linha 551: 
+Linha 552: 1) Connection with a Blank Password/OS Authentication:
+Linha 553: 
+Linha 554:    With the current MSSQL driver you can't connect usinLinha 555: g a
+Linha 556:    blank password or with OS Authentication = True.
+Linha 557: 
+Linha 558:    A patch will be made available soon at Borland's supLinha 559: port
+Linha 560:    download site.
+Linha 561: 
+Linha 562: 
+Linha 563: 2) Master detail:
+Linha 564: 
+Linha 565:    a) When trying to open a master-detail as a nested
+Linha 566:       dataset and if the detail link field is an INTEGELinha 567: R
+Linha 568:       type and defined NOT NULL you will get a SQL ErroLinha 569: r
+Linha 570:       "SQL State:HY000, SQL Error Code: 0, Invalid InpuLinha 571: t
+Linha 572:       parameter values. Check the status values for
+Linha 573:       details"
+Linha 574: 
+Linha 575:       A patch will be made available soon at Borland's
+Linha 576:       support download site.
+Linha 577: 
+Linha 578:    b) ApplyUpdates() on a master-detail with
+Linha 579:       "poFetchDetailsOnDemand" = True causes a SQL erroLinha 580: r
+Linha 581:       "Cannot create new connection because in manual oLinha 582: r
+Linha 583:       distributed transaction mode". Workaround:
+Linha 584: 
+Linha 585:       poFetchDetailsOnDemand = False (default)
+Linha 586: 
+Linha 587: 
+Linha 588: 
+Linha 589: dbExpress MSSQL driver BLOB access
+Linha 590: -----------------------------------
+Linha 591: 
+Linha 592: dbExpress MSSQL uses ISequentialStream (OLEDB
+Linha 593: interface) to access blobs from SQL Server. MS OLEDB
+Linha 594: provider (SQLOLEDB) doesn't support accessing more thanLinha 595: 
+Linha 596: one in a SELECT using ISequentialStream. So, if you areLinha 597: 
+Linha 598: projecting more than one blob column in your queries
+Linha 599: the dbExpress driver will not use the ISequentialStreamLinha 600: 
+Linha 601: to access blobs. Instead, it will bind huge buffers to
+Linha 602: get the blob data. The buffer size is determined by theLinha 603: 
+Linha 604: BlobSize entry in dbxconnections.ini. Make sure to set
+Linha 605: it to an appropriate size to improve performance when
+Linha 606: more than one blob column is projected.
+Linha 607: 
+Linha 608: 
+Linha 609: MySQL limitation (dbExpress)
+Linha 610: ----------------------------
+Linha 611: 
+Linha 612: MySQL can't filter with FLOAT fields in the WHERE
+Linha 613: clause. Since this limitation prevents updates with
+Linha 614: TClientDataset and TDataSetProvider, use DOUBLE
+Linha 615: instead. For more information, see the MySQL
+Linha 616: documentation.
+Linha 617: 
+Linha 618: 
+Linha 619: Huge Text in MySQL (dbExpress)
+Linha 620: ------------------------------
+Linha 621: 
+Linha 622: MySQL Server has a startup parameter called max-
+Linha 623: allowed-packet that, by default, is set to 1 megabyte
+Linha 624: for most MySQL servers. Increase the value of max-
+Linha 625: allowed-packet if you encounter difficulty writing
+Linha 626: large amounts of data (such as large strings) to MySQL.Linha 627: 
+Linha 628: 
+Linha 629: 
+Linha 630: Oracle notes for dbExpress
+Linha 631: --------------------------
+Linha 632: 
+Linha 633: When qualifying a table name with a user name, you mustLinha 634: 
+Linha 635: use quotes around the table name when CommandType is
+Linha 636: set to ctTable.
+Linha 637: 
+Linha 638: Oracle LONG and LONG RAW fields (dbExpress)
+Linha 639: -------------------------------------------
+Linha 640: 
+Linha 641: When using Oracle, the size of LONG and LONG RAW fieldsLinha 642: 
+Linha 643: cannot be determined without fetching the whole field.
+Linha 644: So if BLOB SIZE is set to -1, LONG and LONG RAW fields
+Linha 645: are truncated to 64K. Recommendation: Set BLOB SIZE to
+Linha 646: your best estimate of the blob size.
+Linha 647: 
+Linha 648: Configuring driver files  (dbExpress)
+Linha 649: -------------------------------------
+Linha 650: The Oracle driver now supports Trim Char, Multiple
+Linha 651: Transaction and OS Authentication. You need to add
+Linha 652: these settings to your dbxdrivers for new aliases
+Linha 653: and/or update dbxconnections in order to include these
+Linha 654: settings for old aliases.
+Linha 655: 
+Linha 656: 
+Linha 657: Please append the following at the end of dbxdrivers
+Linha 658: file if you are using a driver file from an earlier
+Linha 659: version of Delphi:
+Linha 660: 
+Linha 661:     [Multiple Transaction]
+Linha 662:     False=0
+Linha 663:     True=1
+Linha 664: 
+Linha 665:     [Trim Char]
+Linha 666:     False=0
+Linha 667:     True=1
+Linha 668: 
+Linha 669:     [OS Authentication]
+Linha 670:     False=0
+Linha 671:     True=1
+Linha 672: 
+Linha 673: Add the following under the [Oracle] section in
+Linha 674: dbxdrivers and under your existent Oracle alias.
+Linha 675: 
+Linha 676:     OS Authentication=False
+Linha 677:     Multiple Transaction=False
+Linha 678:     Trim Char=False
+Linha 679: 
+Linha 680: 
+Linha 681: Oracle OS authentication  (dbExpress)
+Linha 682: -------------------------------------
+Linha 683: 
+Linha 684: To get the correct list of tables and other schema
+Linha 685: objects in the dbExpress components, set the User_Name
+Linha 686: to OPS$XXX, where XXX is the OS Authenticated user.
+Linha 687: 
+Linha 688: 
+Linha 689: =======================================================Linha 690: 
+Linha 691: ABOUT EDITING THE WINDOWS REGISTRY
+Linha 692: 
+Linha 693: Warning:
+Linha 694:     Registry edits are performed at your own risk.
+Linha 695:     Several items in this document and in other parts
+Linha 696:     of the documentation that accompany this product
+Linha 697:     describe how to edit your Windows registry. In mostLinha 698: 
+Linha 699:     cases, we recommend that you use the Microsoft
+Linha 700:     Regedit tool to perform your editing. Whatever toolLinha 701: 
+Linha 702:     you use, however, you should, before making any
+Linha 703:     edits, make backups of your registry and thoroughlyLinha 704: 
+Linha 705:     familiarize yourself with the editing tool and the
+Linha 706:     registry editing process. The registry is a
+Linha 707:     critical component of your operating system, and
+Linha 708:     any mistakes made while editing it can cause your
+Linha 709:     machine to stop functioning.
+Linha 710: 
+Linha 711: 
+Linha 712: =======================================================Linha 713: 
+Linha 714: PRODUCT INFORMATION ON THE WEB
+Linha 715: 
+Linha 716: In addition to numerous private sites that offer
+Linha 717: information, instruction, and samples, the following
+Linha 718: Borland Web-based resources provide a continuous streamLinha 719: 
+Linha 720: of news, product information, updates, code, and other
+Linha 721: materials. You can connect to many of these resources
+Linha 722: directly from the Help menu.
+Linha 723: 
+Linha 724: Delphi Direct [Help|Delphi Direct]
+Linha 725: ----------------------------------
+Linha 726: 
+Linha 727: This IDE add-in resource provides an automatically
+Linha 728: updated list of links to the latest news, downloads,
+Linha 729: and other information about Delphi and Borland.
+Linha 730: 
+Linha 731: Code Central
+Linha 732: ------------
+Linha 733: 
+Linha 734: The CodeCentral Repository is a free, searchable
+Linha 735: database of code, tips, and other materials of interestLinha 736: 
+Linha 737: to developers. For details and registration
+Linha 738: information, visit
+Linha 739: 
+Linha 740:  http://codecentral.borland.com/
+Linha 741: 
+Linha 742: 
+Linha 743: The Borland Web site
+Linha 744: --------------------
+Linha 745: 
+Linha 746: Borland Software Corporation home page:
+Linha 747:   http://www.borland.com
+Linha 748:   [IDE: Help|Borland Home Page]
+Linha 749: 
+Linha 750: Delphi home page:
+Linha 751:   http://www.borland.com/delphi/
+Linha 752:   [IDE: Help|Delphi Home Page]
+Linha 753: 
+Linha 754: Delphi developer support:
+Linha 755:   http://www.borland.com/devsupport/delphi/
+Linha 756:   [IDE: Help|Delphi Developer Support]
+Linha 757: 
+Linha 758: Delphi updates and other downloads:
+Linha 759:   http://www.borland.com/devsupport/delphi/downloads/
+Linha 760: 
+Linha 761: Delphi documentation site:
+Linha 762:   http://www.borland.com/techpubs/delphi
+Linha 763: 
+Linha 764: Newsgroups:
+Linha 765:   http://www.borland.com/newsgroups/
+Linha 766: 
+Linha 767: Worldwide offices and distributors:
+Linha 768:   http://www.borland.com/bww/
+Linha 769: 
+Linha 770: FTP site (anonymous access):
+Linha 771:   ftp.borland.com
+Linha 772: 
+Linha 773: 
+Linha 774: =======================================================Linha 775: 
+Linha 776: Copyright (c) 2002 Borland Software Corporation.
+Linha 777: All rights reserved.
